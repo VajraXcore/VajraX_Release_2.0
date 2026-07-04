@@ -133,7 +133,7 @@ See [VajraX_Release](https://github.com/VajraXcore/VajraX_Release) for the origi
 
 ## Privacy
 
-VajraX collects zero telemetry and zero analytics. All tools run fully offline except the 8 tools listed above (the 7 Live Network Ops tools plus DNS Lookup), which only ever talk to devices on your local network or the host you point them at — nothing is sent to VajraX or any third party.
+VajraX collects zero telemetry and zero analytics. All tools run fully offline except the 8 tools listed above (Live Network Ops' 7 tools, plus DNS Lookup), which only ever talk to devices on your local network or the host you point them at — nothing is sent to VajraX or any third party.
 
 See the full [Privacy Policy](https://vajrax.in#privacy) for details.
 
