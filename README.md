@@ -89,7 +89,7 @@ Tactical Manual → Multi-Vendor Command Reference Pro · Network Scanner → Ne
 | Target SDK | 35 (Android 15) |
 | APK size | ~4.52 MB  |
 | Signing | RSA-4096, APK Signature Scheme v2 |
-| Internet required | No — fully offline. 7 tools in Live Network Ops connect to local network/devices when used (SSH, SNMP, WiFi scan, ping, speed test, Wake-on-LAN) |
+| Internet required | No — fully offline. 8 tools connect to local network/devices when used: SSH Terminal, SNMP Browser Pro, WiFi Analyzer Pro, Network Scanner Pro, Speed Test, Wake-on-LAN Pro, Advanced Ping & Traceroute (Live Network Ops), and DNS Lookup (Command Center) |
 
 ---
 
@@ -133,7 +133,7 @@ See [VajraX_Release](https://github.com/VajraXcore/VajraX_Release) for the origi
 
 ## Privacy
 
-VajraX collects zero telemetry and zero analytics. All tools run fully offline except the 7 Live Network Ops tools listed above, which only ever talk to devices on your local network or the host you point them at — nothing is sent to VajraX or any third party.
+VajraX collects zero telemetry and zero analytics. All tools run fully offline except the 8 tools listed above (the 7 Live Network Ops tools plus DNS Lookup), which only ever talk to devices on your local network or the host you point them at — nothing is sent to VajraX or any third party.
 
 See the full [Privacy Policy](https://vajrax.in#privacy) for details.
 
