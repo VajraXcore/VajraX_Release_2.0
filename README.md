@@ -131,8 +131,21 @@ See [VajraX_Release](https://github.com/VajraXcore/VajraX_Release) for the origi
 
 ---
 
+## Privacy
+
+VajraX collects zero telemetry and zero analytics. All tools run fully offline except the 7 Live Network Ops tools listed above, which only ever talk to devices on your local network or the host you point them at — nothing is sent to VajraX or any third party.
+
+See the full [Privacy Policy](https://vajrax.in#privacy) for details.
+
+## Contact
+
+- **Website:** [vajrax.in](https://vajrax.in)
+- **Email:** [pbr65.tech@gmail.com](mailto:pbr65.tech@gmail.com)
+
+---
+
 ## License
 
-Proprietary. VajraX is provided free of charge for personal and professional use. See repository for full terms.
+Proprietary. VajraX is provided free of charge for personal and professional use, with no paywalls or in-app purchases. See repository for full terms.
 
 © 2026 VajraXcore. All rights reserved.
