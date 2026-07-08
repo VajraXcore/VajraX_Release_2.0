@@ -109,7 +109,7 @@ Also available: [VajraX v1.0.0](https://github.com/VajraXcore/VajraX_Release) �
 Disclosed here rather than discovered by users:
 
 - **Route Summarizer** returns a `/32` summary for single-route input due to a short-circuit in the longest-common-prefix calculation. Not yet fixed.
-- **VLSM Deaggregator** always clamps output to `/30` regardless of a smaller theoretical maximum prefix — a dead code path exists for `/31`/`/32` allocation that isn't currently reachable. Not yet fixed.
+- **Reverse VLSM (VLSM Deaggregator)** enforces a hard ceiling of `/30` on its deepest generated subnet regardless of the requested max prefix — a smaller request (e.g. `/26`) is honored exactly, but the tool can never expand deeper than `/30` even when asked to. RFC 3021 point-to-point (`/31`) and host-route (`/32`) allocation code paths exist but are unreachable as a result. Not yet fixed.
 - **K8s CNI Policy Generator**, scoped in early planning, is not implemented in this release.
 - **SD-WAN Full Overlay Designer** (full multi-site overlay design) is deferred to the planned Windows release. v2.0 ships the narrower-scope **SD-WAN Policy Calculator** instead.
 - **RFC Browser** provides 39 curated deep-dive entries with abstracts and key points — not a full RFC archive. A separate, simpler 519-entry number+title reference table is available under Armory → Field Options.
