@@ -51,7 +51,7 @@ Real-time diagnostics and remote device access.
 - Network Scanner Pro
 - Speed Test
 - Wake-on-LAN Pro
-- Advanced Ping & Traceroute
+- Advanced Ping & Reachability Probe
 
 ### Engine 5 — Protocol Deep Dive (6 tools)
 Protocol references, encoding utilities, and packet analysis.
@@ -71,7 +71,7 @@ VLSM Planner, Subnet Hub, Subnet Troubleshooter, Network ID Architect, Route Sum
 CIDR Cheat Sheet, Binary Heart, Cable Wiring Guide, MAC OUI Lookup, Port Reference, Field Options, Protocol Cheat Sheet, PoE Budget Calculator, Fiber Power Budget, VLAN Architecture Designer, Redundancy Planner
 
 **Superseded by Pro versions (5 tools, redirect to their replacement):**
-Tactical Manual → Multi-Vendor Command Reference Pro · Network Scanner → Network Scanner Pro · Ping & Traceroute → Advanced Ping & Traceroute · SSL Inspector → Certificate Chain Analyzer Pro · Config Diff → Config Diff Pro
+Tactical Manual → Multi-Vendor Command Reference Pro · Network Scanner → Network Scanner Pro · Ping & Reachability Probe → Advanced Ping & Reachability Probe · SSL Inspector → Certificate Chain Analyzer Pro · Config Diff → Config Diff Pro
 
 ---
 
@@ -89,7 +89,7 @@ Tactical Manual → Multi-Vendor Command Reference Pro · Network Scanner → Ne
 | Target SDK | 35 (Android 15) |
 | APK size | 4.40 MB (4,397,208 bytes) |
 | Signing | RSA-4096, APK Signature Scheme v2 |
-| Internet required | No — fully offline. 8 tools connect to local network/devices when used: SSH Terminal, SNMP Browser Pro, WiFi Analyzer Pro, Network Scanner Pro, Speed Test, Wake-on-LAN Pro, Advanced Ping & Traceroute (Live Network Ops), and DNS Lookup (Command Center) |
+| Internet required | No — fully offline. 8 tools connect to local network/devices when used: SSH Terminal, SNMP Browser Pro, WiFi Analyzer Pro, Network Scanner Pro, Speed Test, Wake-on-LAN Pro, Advanced Ping & Reachability Probe (Live Network Ops), and DNS Lookup (Command Center) |
 
 ---
 
