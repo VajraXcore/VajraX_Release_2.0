@@ -87,7 +87,7 @@ Tactical Manual → Multi-Vendor Command Reference Pro · Network Scanner → Ne
 |---|---|
 | Minimum Android version | 8.0 (API 26) |
 | Target SDK | 35 (Android 15) |
-| APK size | ~4.31 MB (4,518,052 bytes) |
+| APK size | ~4.52 MB (4,518,052 bytes) |
 | Signing | RSA-4096, APK Signature Scheme v2 |
 | Internet required | No — fully offline. 8 tools connect to local network/devices when used: SSH Terminal, SNMP Browser Pro, WiFi Analyzer Pro, Network Scanner Pro, Speed Test, Wake-on-LAN Pro, Advanced Ping & Reachability Probe (Live Network Ops), and DNS Lookup (Command Center) |
 
