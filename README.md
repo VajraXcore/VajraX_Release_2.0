@@ -1,4 +1,4 @@
-# VajraX v2.0.0
+# VajraX v2.0.1
 
 **Professional network engineering and cybersecurity toolkit — 68 tools, offline-first, Android.**
 
@@ -87,7 +87,7 @@ Tactical Manual → Multi-Vendor Command Reference Pro · Network Scanner → Ne
 |---|---|
 | Minimum Android version | 8.0 (API 26) |
 | Target SDK | 35 (Android 15) |
-| APK size | 4.40 MB (4,397,208 bytes) |
+| APK size | ~4.31 MB (4,518,052 bytes) |
 | Signing | RSA-4096, APK Signature Scheme v2 |
 | Internet required | No — fully offline. 8 tools connect to local network/devices when used: SSH Terminal, SNMP Browser Pro, WiFi Analyzer Pro, Network Scanner Pro, Speed Test, Wake-on-LAN Pro, Advanced Ping & Reachability Probe (Live Network Ops), and DNS Lookup (Command Center) |
 
@@ -95,7 +95,7 @@ Tactical Manual → Multi-Vendor Command Reference Pro · Network Scanner → Ne
 
 ## Installation
 
-1. Download `VajraX-v2.0.0.apk` from the [Releases page](../../releases).
+1. Download the APK from the [Releases page](../../releases) (latest: v2.0.1).
 2. Enable "Install unknown apps" for your browser or file manager in Android Settings.
 3. Open the downloaded APK and install.
 4. Verify signature (optional but recommended): Expected: RSA 4096-bit, CN=VajraX, O=VajraX, C=IN, APK Signature Scheme v2.
@@ -108,8 +108,8 @@ Also available: [VajraX v1.0.0](https://github.com/VajraXcore/VajraX_Release) �
 
 Disclosed here rather than discovered by users:
 
-- **Route Summarizer** returns a `/32` summary for single-route input due to a short-circuit in the longest-common-prefix calculation. Not yet fixed.
-- **Reverse VLSM (VLSM Deaggregator)** enforces a hard ceiling of `/30` on its deepest generated subnet regardless of the requested max prefix — a smaller request (e.g. `/26`) is honored exactly, but the tool can never expand deeper than `/30` even when asked to. RFC 3021 point-to-point (`/31`) and host-route (`/32`) allocation code paths exist but are unreachable as a result. Not yet fixed.
+- **Route Summarizer** returned a `/32` summary for single-route input due to a short-circuit in the longest-common-prefix calculation. Fixed in v2.0.1 — single-route input now returns the route's own prefix, covered by regression tests.
+- **Reverse VLSM (VLSM Deaggregator)** enforces a hard ceiling of `/30` on its deepest generated subnet regardless of the requested max prefix — a smaller request (e.g. `/26`) is honored exactly, but the tool can never expand deeper than `/30` even when asked to. RFC 3021 point-to-point (`/31`) and host-route (`/32`) allocation code paths exist but are unreachable as a result. This is intentional design, not a defect — no fix is planned.
 - **K8s CNI Policy Generator**, scoped in early planning, is not implemented in this release.
 - **SD-WAN Full Overlay Designer** (full multi-site overlay design) is deferred to the planned Windows release. v2.0 ships the narrower-scope **SD-WAN Policy Calculator** instead.
 - **RFC Browser** provides 39 curated deep-dive entries with abstracts and key points — not a full RFC archive. A separate, simpler 519-entry number+title reference table is available under Armory → Field Options.
@@ -117,6 +117,12 @@ Disclosed here rather than discovered by users:
 ---
 
 ## Changelog
+
+### v2.0.1
+- Fixed Route Summarizer returning a `/32` summary for single-route input; added `/8`, `/24`, `/30`, `/32` regression tests
+- Relabeled Advanced Ping's "traceroute" mode to "Reachability Probe" — unprivileged Android/Java has no TTL API for real hop discovery, so this corrects the capability claim rather than changing behavior
+- Removed the unused `androidx.security:security-crypto` dependency (zero references in app source; Config Vault's encryption is hand-rolled against `javax.crypto.Cipher` and the Android Keystore)
+- Repaired the CI/CD release pipeline — this is the first release published by the fully automated workflow
 
 ### v2.0.0
 - Added 5 new engines: Fabric Architect, Config Intelligence, Security Ops Center, Live Network Ops, Protocol Deep Dive (37 new tools)
