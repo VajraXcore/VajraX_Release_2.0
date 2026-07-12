@@ -1,4 +1,4 @@
-# VajraX v2.0.1
+# VajraX v2.1.1
 
 **Professional network engineering and cybersecurity toolkit — 68 tools, offline-first, Android.**
 
@@ -87,7 +87,7 @@ Tactical Manual → Multi-Vendor Command Reference Pro · Network Scanner → Ne
 |---|---|
 | Minimum Android version | 8.0 (API 26) |
 | Target SDK | 35 (Android 15) |
-| APK size | ~4.52 MB (4,518,052 bytes) |
+| APK size | ~4.41 MB (4,407,920 bytes) |
 | Signing | RSA-4096, APK Signature Scheme v2 |
 | Internet required | No — fully offline. 8 tools connect to local network/devices when used: SSH Terminal, SNMP Browser Pro, WiFi Analyzer Pro, Network Scanner Pro, Speed Test, Wake-on-LAN Pro, Advanced Ping & Reachability Probe (Live Network Ops), and DNS Lookup (Command Center) |
 
@@ -95,7 +95,7 @@ Tactical Manual → Multi-Vendor Command Reference Pro · Network Scanner → Ne
 
 ## Installation
 
-1. Download the APK from the [Releases page](../../releases) (latest: v2.0.1).
+1. Download the APK from the [Releases page](../../releases) (latest: v2.1.1).
 2. Enable "Install unknown apps" for your browser or file manager in Android Settings.
 3. Open the downloaded APK and install.
 4. Verify signature (optional but recommended): Expected: RSA 4096-bit, CN=VajraX, O=VajraX, C=IN, APK Signature Scheme v2.
@@ -117,6 +117,13 @@ Disclosed here rather than discovered by users:
 ---
 
 ## Changelog
+
+### v2.1.1
+- Corrected IP Reputation database size disclosure (was showing an aspirational ~10,000 figure; now accurately shows the current 46 entries, with future expansion clearly marked as planned, not current)
+
+### v2.1.0
+- SSH Terminal now performs TOFU (trust-on-first-use) host-key verification, closing the previous MITM exposure where `StrictHostKeyChecking` was disabled
+- New app icon: VX monogram, replacing the previous crossed-vajra design
 
 ### v2.0.1
 - Fixed Route Summarizer returning a `/32` summary for single-route input; added `/8`, `/24`, `/30`, `/32` regression tests
